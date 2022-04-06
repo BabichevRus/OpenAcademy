@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+'''
 from odoo import http
 
 
@@ -9,7 +10,7 @@ class Openac(http.Controller):
         return http.request.render('openac.index', {
             'teachers': ["Diana Padilla", "Jody Caroll", "Lester Vaughn"],
         })
-'''
+
      @http.route('/openac/openac/objects', auth='public')
      def list(self, **kw):
          return http.request.render('openac.listing', {

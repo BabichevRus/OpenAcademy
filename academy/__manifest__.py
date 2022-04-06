@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Open Academy",
+    'name': "Academy WEB",
 
     'summary': """
-        Мой первый модкль Открытая акадения""",
-
-    'description': """
-        Мой первый модкль Открытая акадения
+        Academy WEB
     """,
 
-    'author': "My Company",
-    'website': "https://www.a4.com.ua",
+    'description': """
+        Academy WEB
+    """,
+
+    'author': "Academy WEB",
+    'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -19,19 +20,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'board'],
+    'depends': ['mail', 'website'],
 
     # always loaded
     'data': [
-        'security/security.xml',
         'security/ir.model.access.csv',
-        'wizard/session_create_wizard_views.xml',
-        'views/partners_views.xml',
-        'views/course_views.xml',
-        'views/sessions_views.xml',
+        'views/views.xml',
         'views/templates.xml',
-        'report/report_sessions.xml',
-        'report/dashboard.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

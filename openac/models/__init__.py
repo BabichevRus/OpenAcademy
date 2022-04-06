@@ -3,4 +3,3 @@
 from . import partners
 from . import course
 from . import sessions
-from . import teachers
