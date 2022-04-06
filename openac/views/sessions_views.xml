@@ -1,0 +1,146 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="openac.sessionslist">
+      <field name="name">Open Academy Sessions list</field>
+      <field name="model">openac.sessions</field>
+      <field name="arch" type="xml">
+        <tree decoration-danger="duration &gt;= 15" decoration-info="duration &lt;= 5">
+          <field name="course"/>
+          <!-- <field name="attendeescount"/>-->
+          <field name="name"/>
+          <field name="startdate"/>
+          <field name="enddate"/>
+          <field name="duration"/>
+          <field name="number_of_seats"/>
+          <field name="percent" widget="progressbar"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openac.sessionssearch" >
+      <field name="name">Open Academy Sessions search</field>
+      <field name="model">openac.sessions</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="course"/>
+          <field name="description"/>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openac.sessions_calendar">
+      <field name="name">openac.sessions_calendar</field>
+      <field name="model">openac.sessions</field>
+      <field name="arch" type="xml">
+        <calendar string="Calendar" date_start="startdate" date_stop="enddate" color="instructor">
+          <field name="name"/>
+        </calendar>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openac.sessions_graph">
+      <field name="name">openac.sessions_graph</field>
+      <field name="model">openac.sessions</field>
+      <field name="arch" type="xml">
+        <graph string="Graf">
+          <field name="course"/>
+          <field name="attendeescount" type="measure"/>
+        </graph>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openac_session_kanban">
+      <field name="name">openac.sessionkanban</field>
+      <field name="model">openac.sessions</field>
+      <field name="arch" type="xml">
+        <kanban string="Kanban" default_group_by="course">
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_global_click">
+                <div class="oe_kanban_details">
+                  <!-- Описываем тело в HTML -->
+                  <table style="width:100%">
+                    <tr lign="left">
+                      <td colspan="3">
+                        <h3><field name="name"/></h3>
+                        <field name="startdate"/>-<field name="enddate"/>
+                      </td>
+                    </tr>
+                    <tr align="left">
+                      <td style="width:40%">
+                        <strong>Seats: </strong>
+                      </td>
+                      <td style="width:10%">
+                        <field name="duration"/>
+                      </td>
+                      <td align="center" rowspan="2">
+                        <field name="percent" widget="percentpie" string=""/>
+                      </td>
+                    </tr>
+                    <tr >
+                      <td ><strong>Attendees count: </strong></td>
+                      <td ><field name="attendeescount"/></td>
+                    </tr>
+                  </table>
+
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="openac.sessionsform">
+      <field name="name">Open Academy Sessions form</field>
+      <field name="model">openac.sessions</field>
+      <field name="arch" type="xml">
+        <form string="Session form">
+          <group colspan="3">
+            <group string="Main">
+              <field name="course" string="Course"/>
+              <field name="name"/>
+              <field name="instructor"/>
+            </group>
+            <group string="Secondary">
+              <field name="startdate"/>
+              <field name="duration"/>
+              <field name="number_of_seats"/>
+              <field name="is_active"/>
+            </group>
+            <group string="Weedjets" colspan="1">
+              <field name="percent" widget="percentpie" string=""/>
+            </group>
+            <notebook colspan="3">
+              <page string="Description">
+                <field name="description" nolabel="1"/>
+              </page>
+              <page string="Attendees">
+                  <field name="attendeeslist" nolabel="1"/>
+              </page>
+            </notebook>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="openac.sessions_action_window">
+      <field name="name">Open Academy window</field>
+      <field name="res_model">openac.sessions</field>
+      <field name="view_mode">tree,form,calendar,graph,kanban</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Open Academy" id="openac.menu_root"/>
+    <!-- menu categories -->
+    <menuitem name="Sessions" parent="openac.menu_root" id="openac.sessions_categories"/>
+    <!-- actions -->
+    <menuitem name="Sessions" parent="openac.sessions_categories" id="openac.sessions_actions"
+              action="openac.sessions_action_window"/>
+  </data>
+</odoo>

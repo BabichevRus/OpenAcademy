@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="openac.partnerlist">
+            <field name="name">Instructors list</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="after">
+                    <field name="is_instructor"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="openac.partner_form">
+            <field name="name">Instructors form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="is_instructor"/>
+                </xpath>
+                <xpath expr="//page[@name='internal_notes']" position="after">
+                    <page name='sessions' string='Sessions'>
+                        <group>
+                            <field name='sessionslist'/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="openac.partner_action_window">
+            <field name="name">Open Academy window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="Open Academy" id="openac.menu_root"/>
+        <!-- menu categories -->
+        <menuitem name="Instructors" parent="openac.menu_root" id="openac.partner_categories"/>
+        <!-- actions -->
+        <menuitem name="Instructors" parent="openac.partner_categories" id="openac.partner_actions"
+                  action="openac.partner_action_window"/>
+
+    </data>
+</odoo>

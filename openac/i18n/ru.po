@@ -1,0 +1,300 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* openac
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-05 13:27+0000\n"
+"PO-Revision-Date: 2022-04-05 13:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__percent
+msgid "% filling"
+msgstr "% заполнения"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.openac_sessionkanban
+msgid "<strong>Attendees count: </strong>"
+msgstr "<strong>Количество участников: </strong>"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.openac_sessionkanban
+msgid "<strong>Seats: </strong>"
+msgstr "<strong>Мест: </strong>"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_session_create_wizard__attendeeslist
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__attendeeslist
+#: model_terms:ir.ui.view,arch_db:openac.sessionsform
+msgid "Attendees"
+msgstr "Участники"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__attendeescount
+msgid "Attendees count"
+msgstr "Количество участников"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.openac_wizardform
+msgid "Cancel"
+msgstr "Отменить"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__color
+msgid "Color"
+msgstr "Цвет"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__course
+#: model_terms:ir.ui.view,arch_db:openac.sessionsform
+msgid "Course"
+msgstr "Курс"
+
+#. module: openac
+#: model:ir.model.constraint,message:openac.constraint_openac_course_name_uniq
+msgid "Course all already exists"
+msgstr "Курс уже существует"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.form
+msgid "Course form"
+msgstr "Форма курса"
+
+#. module: openac
+#: model:ir.ui.menu,name:openac.courses_actions
+#: model:ir.ui.menu,name:openac.courses_categories
+msgid "Courses"
+msgstr "Курсы"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__create_uid
+#: model:ir.model.fields,field_description:openac.field_openac_session_create_wizard__create_uid
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__create_uid
+msgid "Created by"
+msgstr "Создан пользователем"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__create_date
+#: model:ir.model.fields,field_description:openac.field_openac_session_create_wizard__create_date
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__create_date
+msgid "Created on"
+msgstr "Создан дата"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__description
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__description
+#: model_terms:ir.ui.view,arch_db:openac.form
+#: model_terms:ir.ui.view,arch_db:openac.sessionsform
+msgid "Description"
+msgstr "Описание"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__display_name
+#: model:ir.model.fields,field_description:openac.field_openac_session_create_wizard__display_name
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__duration
+msgid "Duration"
+msgstr "Длительность"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__hours
+msgid "Duration in hour"
+msgstr "Длительность в часах"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__enddate
+msgid "End Date"
+msgstr "Дата окончания"
+
+#. module: openac
+#: model:ir.actions.act_window,name:openac.create_session_wizard
+#: model_terms:ir.ui.view,arch_db:openac.openac_wizardform
+msgid "Fill in participants"
+msgstr "Заполнить участников"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.openac_sessiongraph
+msgid "Graf"
+msgstr "Граф"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.search
+msgid "Group By"
+msgstr "Сгруппировать"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__id
+#: model:ir.model.fields,field_description:openac.field_openac_session_create_wizard__id
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__id
+msgid "ID"
+msgstr "ID"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__instructor
+#: model:ir.model.fields,field_description:openac.field_res_partner__is_instructor
+#: model:ir.model.fields,field_description:openac.field_res_users__is_instructor
+msgid "Instructor"
+msgstr "Инструктор"
+
+#. module: openac
+#: model:ir.ui.menu,name:openac.partner_actions
+#: model:ir.ui.menu,name:openac.partner_categories
+msgid "Instructors"
+msgstr "Инструкторы"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__is_active
+msgid "Is active"
+msgstr "Активен"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.sessionscalendar
+msgid "Kalendar"
+msgstr "Календарь"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.openac_sessionkanban
+msgid "Kanban"
+msgstr "Канбан"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course____last_update
+#: model:ir.model.fields,field_description:openac.field_openac_session_create_wizard____last_update
+#: model:ir.model.fields,field_description:openac.field_openac_sessions____last_update
+msgid "Last Modified on"
+msgstr "Дата последнего изменения"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__write_uid
+#: model:ir.model.fields,field_description:openac.field_openac_session_create_wizard__write_uid
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__write_uid
+msgid "Last Updated by"
+msgstr "Последнее обновление пользователем"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__write_date
+#: model:ir.model.fields,field_description:openac.field_openac_session_create_wizard__write_date
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__write_date
+msgid "Last Updated on"
+msgstr "Дата последнего обновления"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.sessionsform
+msgid "Main"
+msgstr "Главная"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.search
+msgid "My courses"
+msgstr "Мои курсы"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__name
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__name
+msgid "Name"
+msgstr "Наименование"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__number_of_seats
+msgid "Number of seats"
+msgstr "Количество мест"
+
+#. module: openac
+#: model:ir.ui.menu,name:openac.menu_root
+msgid "Open Academy"
+msgstr "Открытая Академия"
+
+#. module: openac
+#: model:res.groups,name:openac.group_course_sessions
+msgid "Open Academy / courses + sessions"
+msgstr "Открытая Академия / курсы + сессии"
+
+#. module: openac
+#: model:ir.actions.act_window,name:openac.course_action_window
+#: model:ir.actions.act_window,name:openac.partner_action_window
+#: model:ir.actions.act_window,name:openac.sessions_action_window
+msgid "Open Academy window"
+msgstr "Открытая Академия. Главное окно"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__responsible
+#: model_terms:ir.ui.view,arch_db:openac.search
+msgid "Responsible"
+msgstr "Ответсвенный"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.openac_wizardform
+msgid "Run"
+msgstr "Выполнить"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.sessionsform
+msgid "Secondary"
+msgstr "Дополнительно"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_session_create_wizard__sessions
+msgid "Sessins"
+msgstr "Сессии"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.sessionsform
+msgid "Session form"
+msgstr "Форма сессии"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_course__sessionslist
+#: model:ir.model.fields,field_description:openac.field_res_partner__sessionslist
+#: model:ir.model.fields,field_description:openac.field_res_users__sessionslist
+#: model:ir.ui.menu,name:openac.sessions_actions
+#: model:ir.ui.menu,name:openac.sessions_categories
+#: model_terms:ir.ui.view,arch_db:openac.partner_form
+msgid "Sessions"
+msgstr "Сессии"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.form
+msgid "Sessions list"
+msgstr "Список сессий"
+
+#. module: openac
+#: model:ir.model.fields,field_description:openac.field_openac_sessions__startdate
+msgid "Start Date"
+msgstr "Дата старта"
+
+#. module: openac
+#: model_terms:ir.ui.view,arch_db:openac.sessionsform
+msgid "Weedjets"
+msgstr "Виджеты"
+
+#. module: openac
+#: model:ir.model,name:openac.model_openac_course
+msgid "openac.course"
+msgstr "openac.course"
+
+#. module: openac
+#: model:ir.model,name:openac.model_openac_session_create_wizard
+msgid "openac.session_create_wizard"
+msgstr "openac.session_create_wizard"
+
+#. module: openac
+#: model:ir.model,name:openac.model_openac_sessions
+msgid "openac.sessions"
+msgstr "openac.sessions"
+
+#. module: openac
+#: model:ir.model,name:openac.model_res_partner
+msgid "res.partner"
+msgstr "res.partner"

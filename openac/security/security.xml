@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_course_sessions" model="res.groups">
+            <field name="name">Open Academy / courses + sessions</field>
+        </record>
+
+        <record id="responsible_modify_only" model="ir.rule">
+            <field name="name">Only those in charge can edit</field>
+            <field name="model_id" ref="openac.model_openac_course"/>
+            <field name="groups" eval="[(4, ref('openac.group_course_sessions'))]"/>
+            <field name="perm_read" eval="0"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="1"/>
+            <field name="domain_force">
+                ['|', ('responsible','=',user.id),('responsible','=',False)]
+            </field>
+        </record>
+    </data>
+</odoo>
+

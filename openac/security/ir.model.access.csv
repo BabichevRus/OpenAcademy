@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+1_access_openac_course,access_openac_course,openac.model_openac_course,,1,0,0,0
+2_access_openac_sessions,access_openac_sessions,openac.model_openac_sessions,,1,0,0,0
+
+3_access_openac_course,access_openac_course,openac.model_openac_course,openac.group_course_sessions,1,1,1,1
+4_access_openac_sessions,access_openac_sessions,openac.model_openac_sessions,openac.group_course_sessions,1,1,1,1
+5_openac_access_openac_session_create_wizard,access_openac_session_create_wizard,openac.model_openac_session_create_wizard,,1,1,1,1
+

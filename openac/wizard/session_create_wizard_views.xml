@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+         <record model="ir.ui.view" id="openac_wizardform">
+            <field name="name">create.sessions.wizard.form</field>
+            <field name="model">openac.session_create_wizard</field>
+            <field name="arch" type="xml">
+                <form string="Fill in participants">
+                    <group>
+                        <field name="sessions"/>
+                        <field name="attendeeslist"/>
+                    </group>
+                    <footer>
+                        <button string="Run" name = "action_create_session" class="btn-primary" type="object"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="openac.create_session_wizard">
+            <field name="name">Fill in participants</field>
+            <field name="res_model">openac.session_create_wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_openac_sessions"/>
+            <field name="view_id" ref="openac_wizardform"/>
+        </record>
+    </data>
+</odoo>

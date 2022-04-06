@@ -1,0 +1,73 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="openac.courselist">
+      <field name="name">Open Academy Course list</field>
+      <field name="model">openac.course</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="responsible"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="openac.search" >
+      <field name="name">Open Academy Course search</field>
+      <field name="model">openac.course</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="description"/>
+
+          <filter name="my_courses" string="My courses"
+                  domain="[('responsible', '=', uid)]"/>
+          <group string="Group By">
+            <filter name="by_responsible" string="Responsible"
+                    context="{'group_by': 'responsible'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="openac.form">
+      <field name="name">Open Academy Course form</field>
+      <field name="model">openac.course</field>
+      <field name="arch" type="xml">
+        <form string="Course form">
+          <group>
+            <field name="name"/>
+            <field name="responsible"/>
+            <notebook colspan="2">
+              <page string="Description">
+                <field name="description" nolabel="1"/>
+              </page>
+              <page string="Sessions list">
+                <field name="sessionslist" nolabel="1"/>
+              </page>
+            </notebook>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="openac.course_action_window">
+      <field name="name">Open Academy window</field>
+      <field name="res_model">openac.course</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context" eval="{'search_default_my_courses': 1}"/>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Open Academy" id="openac.menu_root"/>
+    <!-- menu categories -->
+    <menuitem name="Courses" parent="openac.menu_root" id="openac.courses_categories"/>
+    <!-- actions -->
+    <menuitem name="Courses" parent="openac.courses_categories" id="openac.courses_actions"
+              action="openac.course_action_window"/>
+
+  </data>
+</odoo>

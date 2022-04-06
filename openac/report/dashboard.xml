@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="ir.actions.act_window" id="act_session_graph">
+            <field name="name">Attendees by course</field>
+            <field name="res_model">openac.sessions</field>
+            <field name="view_mode">graph</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_session_calendar">
+            <field name="name">Sessions calendar</field>
+            <field name="res_model">openac.sessions</field>
+            <field name="view_mode">calendar</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_course_list">
+            <field name="name">Courses</field>
+            <field name="res_model">openac.course</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--My Dashboard-->
+        <record model="ir.ui.view" id="board_my_dash_view">
+            <field name="name">Dashboard</field>
+            <field name="model">board.board</field>
+            <field name="arch" type="xml">
+                <form string="Dashboard">
+                    <board style="1-1">
+                        <column>
+                            <action
+                                string="Sessions calendar"
+                                name="%(act_session_calendar)d"/>
+                        </column>
+                        <column>
+                            <action
+                                string="Attendees by course"
+                                name="%(act_session_graph)d"/>
+                            <action
+                                string="Courses"
+                                name="%(act_course_list)d"/>
+                        </column>
+                    </board>
+                </form>
+            </field>
+        </record>
+
+        <!--My Dashboard Action-->
+        <record model="ir.actions.act_window" id="open_board_my_dash_action">
+            <field name="name">Dashboard</field>
+            <field name="res_model">board.board</field>
+            <field name="view_mode">form</field>
+            <field name="usage">menu</field>
+            <field name="view_id" ref="board_my_dash_view"/>
+        </record>
+
+        <!--My Dashboard Menu-->
+        <menuitem
+            id="menu_board_my_dash"
+            parent="openac.menu_root"
+            action="open_board_my_dash_action"
+            sequence="5"/>
+    </data>
+</odoo>
