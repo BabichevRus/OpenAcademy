@@ -7,3 +7,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 4_access_openac_sessions,access_openac_sessions,openac.model_openac_sessions,openac.group_course_sessions,1,1,1,1
 5_openac_access_openac_session_create_wizard,access_openac_session_create_wizard,openac.model_openac_session_create_wizard,,1,1,1,1
 
+6_access_openac_teachers,access_openac_teachers,openac.model_openac_teachers,,1,1,1,1

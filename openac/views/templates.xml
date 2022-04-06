@@ -1,6 +1,12 @@
 <odoo>
     <data>
-<!--
+        <template id="index">
+            <title>Academy</title>
+            <t t-foreach="teachers" t-as="teacher">
+              <p><t t-esc="teacher"/></p>
+            </t>
+        </template>
+        <!--
         <template id="listing">
           <ul>
             <li t-foreach="objects" t-as="object">
@@ -19,6 +25,6 @@
             </t>
           </dl>
         </template>
--->
+        -->
     </data>
 </odoo>
