@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="action_openac_teachers" model="ir.actions.act_window">
+            <field name="name">Academy teachers</field>
+            <field name="res_model">openac.teachers</field>
+        </record>
+
+        <menuitem sequence="0" id="menu_openac" name="Academy"/>
+
+        <menuitem id="menu_openac_content" parent="menu_openac"
+                  name="Academy Content"/>
+
+        <menuitem id="menu_openac_content_teachers"
+                  parent="menu_openac_content"
+                  action="action_openac_teachers"/>
+    </data>
+</odoo>

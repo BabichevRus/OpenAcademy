@@ -5,3 +5,4 @@ class Teachers(models.Model):
     _description = 'openac.teachers'
 
     name = fields.Char()
+    biography = fields.Html()

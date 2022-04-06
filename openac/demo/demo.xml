@@ -1,30 +1,40 @@
 <odoo>
     <data>
 
-          <record id="object0" model="openac.course">
+        <record id="object0" model="openac.course">
             <field name="name">Course 0</field>
             <field name="description">Course description 0</field>
-          </record>
+        </record>
 
-          <record id="object1" model="openac.course">
+        <record id="object1" model="openac.course">
             <field name="name">Course 1</field>
             <field name="description">Course description 1</field>
-          </record>
+        </record>
 
-          <record id="object2" model="openac.course">
+        <record id="object2" model="openac.course">
             <field name="name">Course 2</field>
             <field name="description">Course description 2</field>
-          </record>
+        </record>
 
-          <record id="object3" model="openac.course">
+        <record id="object3" model="openac.course">
             <field name="name">Course 3</field>
             <field name="description">Course description 3</field>
-          </record>
+        </record>
 
-          <record id="object4" model="openac.course">
+        <record id="object4" model="openac.course">
             <field name="name">Course 4</field>
             <field name="description">Course description 4</field>
-          </record>
+        </record>
+
+        <record id="padilla" model="openac.teachers">
+            <field name="name">Diana Padilla</field>
+        </record>
+        <record id="carroll" model="openac.teachers">
+            <field name="name">Jody Carroll</field>
+        </record>
+        <record id="vaughn" model="openac.teachers">
+            <field name="name">Lester Vaughn</field>
+        </record>
 
     </data>
 </odoo>

@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'board'],
+    'depends': ['base', 'board', 'website'],
 
     # always loaded
     'data': [
@@ -31,6 +31,7 @@
         'views/sessions_views.xml',
         'views/templates.xml',
         'views/teachers_views.xml',
+        'views/web_views.xml',
         'report/report_sessions.xml',
         'report/dashboard.xml',
     ],

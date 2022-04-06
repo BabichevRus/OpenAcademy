@@ -40,9 +40,9 @@
         <!-- Top menu item -->
         <menuitem name="Open Academy" id="openac.menu_root"/>
         <!-- menu categories -->
-        <menuitem name="Instructors" parent="openac.menu_root" id="openac.partner_categories"/>
+        <menuitem name="Instructors" parent="openac.menu_root" id="openac.courses_categories"/>
         <!-- actions -->
-        <menuitem name="Instructors" parent="openac.partner_categories" id="openac.partner_actions"
+        <menuitem name="Instructors" parent="openac.courses_categories" id="openac.partner_actions"
                   action="openac.partner_action_window"/>
 
     </data>

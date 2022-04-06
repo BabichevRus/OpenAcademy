@@ -1,12 +1,53 @@
 <odoo>
     <data>
+
+        <template id="index">
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-foreach="teachers" t-as="teacher">
+                            <p>
+                                <a t-attf-href="/openac/{{ slug(teacher) }}">
+                                    <t t-esc="teacher.name"/>
+                                </a>
+                            </p>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="biography">
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure"/>
+                <div class="oe_structure">
+                    <div class="oe_structure">
+                        <div class="container">
+                            <h3 t-field="person.name"/>
+                            <p>Last modified: <i t-field="person.write_date" t-options='{"format": "long"}'/></p>
+                            <p>Last modified: <i t-field="person.write_date" t-options='{"widget": "relative"}'/></p>
+                            <div t-field="person.biography"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+            </t>
+        </template>
+
+        <!--
         <template id="index">
             <title>Academy</title>
             <t t-foreach="teachers" t-as="teacher">
-              <p><t t-esc="teacher"/></p>
+                <p><t t-esc="teacher.id"/>.
+                    <t t-esc="teacher.name"/>
+                </p>
             </t>
         </template>
-        <!--
+
+
+
         <template id="listing">
           <ul>
             <li t-foreach="objects" t-as="object">

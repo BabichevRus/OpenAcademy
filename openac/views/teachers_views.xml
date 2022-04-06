@@ -19,6 +19,7 @@
         <form string="Teachers form">
           <group>
             <field name="name"/>
+            <field name="biography"/>
           </group>
         </form>
       </field>
