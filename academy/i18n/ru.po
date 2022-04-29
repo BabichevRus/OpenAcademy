@@ -1,0 +1,136 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* academy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-29 19:01+0000\n"
+"PO-Revision-Date: 2022-04-29 19:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: academy
+#: model:ir.ui.menu,name:academy.menu_academy
+#: model_terms:ir.ui.view,arch_db:academy.biography
+#: model_terms:ir.ui.view,arch_db:academy.index
+msgid "Academy"
+msgstr "Академия"
+
+#. module: academy
+#: model:ir.ui.menu,name:academy.menu_academy_content
+msgid "Academy Content"
+msgstr "Академия контент"
+
+#. module: academy
+#: model:ir.actions.act_window,name:academy.action_academy_courses
+#: model:ir.ui.menu,name:academy.menu_academy_content_courses
+msgid "Academy courses"
+msgstr "Курсы академии"
+
+#. module: academy
+#: model:ir.actions.act_window,name:academy.action_academy_teachers
+#: model:ir.ui.menu,name:academy.menu_academy_content_teachers
+msgid "Academy teachers"
+msgstr "Учителя академии"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers__biography
+msgid "Biography"
+msgstr "Биография"
+
+#. module: academy
+#: model:product.template,name:academy.course0
+msgid "Course 0"
+msgstr "Курс 0"
+
+#. module: academy
+#: model:product.template,name:academy.course1
+msgid "Course 1"
+msgstr "Курс 1"
+
+#. module: academy
+#: model:product.template,name:academy.course2
+msgid "Course 2"
+msgstr "Курс 2"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers__course_ids
+#: model:product.public.category,name:academy.category_courses
+#: model_terms:ir.ui.view,arch_db:academy.academy_course_list
+msgid "Courses"
+msgstr "Курсы"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers__create_uid
+msgid "Created by"
+msgstr "Создан ответсвенным"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers__create_date
+msgid "Created on"
+msgstr "Дата создания"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers__id
+msgid "ID"
+msgstr "ID"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers____last_update
+msgid "Last Modified on"
+msgstr "Дата последнего изменения"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers__write_uid
+msgid "Last Updated by"
+msgstr "Последним обновил"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers__write_date
+msgid "Last Updated on"
+msgstr "Дата последнего обновления"
+
+#. module: academy
+#: model_terms:ir.ui.view,arch_db:academy.biography
+msgid "Last modified:"
+msgstr "Последние изменения:"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_academy_teachers__name
+msgid "Name"
+msgstr "Имя"
+
+#. module: academy
+#: model:ir.model,name:academy.model_product_template
+msgid "Product Template"
+msgstr "Шаблон продукта"
+
+#. module: academy
+#: model:ir.model.fields,field_description:academy.field_product_product__teacher_id
+#: model:ir.model.fields,field_description:academy.field_product_template__teacher_id
+#: model_terms:ir.ui.view,arch_db:academy.academy_course_form
+msgid "Teacher"
+msgstr "Учитель"
+
+#. module: academy
+#: model:product.template,uom_name:academy.course0
+#: model:product.template,uom_name:academy.course1
+#: model:product.template,uom_name:academy.course2
+msgid "Units"
+msgstr "Элементы"
+
+#. module: academy
+#: model:ir.model,name:academy.model_academy_teachers
+msgid "academy.teachers"
+msgstr "academy.teachers"
