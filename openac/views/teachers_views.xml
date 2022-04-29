@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="openac.teachers_list">
+      <field name="name">Open Academy teachers list</field>
+      <field name="model">openac.teachers</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+    <record model="ir.ui.view" id="openac.teachers_form">
+      <field name="name">Open Academy teachers form</field>
+      <field name="model">openac.teachers</field>
+      <field name="arch" type="xml">
+        <form string="Teachers form">
+          <group>
+            <field name="name"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="openac.teachers_action_window">
+      <field name="name">Open Academy window</field>
+      <field name="res_model">openac.teachers</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Open Academy" id="openac.menu_root"/>
+    <!-- menu categories -->
+    <menuitem name="Teachers" parent="openac.menu_root" id="openac.courses_categories"/>
+    <!-- actions -->
+    <menuitem name="Teachers" parent="openac.courses_categories" id="openac.teachers_actions"
+              action="openac.teachers_action_window"/>
+
+  </data>
+</odoo>

@@ -30,6 +30,7 @@
         'views/course_views.xml',
         'views/sessions_views.xml',
         'views/templates.xml',
+        'views/teachers_views.xml',
         'report/report_sessions.xml',
         'report/dashboard.xml',
     ],
