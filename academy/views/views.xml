@@ -25,21 +25,22 @@
 
         <record id="action_academy_courses" model="ir.actions.act_window">
             <field name="name">Academy courses</field>
-            <field name="res_model">academy.courses</field>
+            <field name="res_model">product.template</field>
         </record>
+
         <record id="academy_course_search" model="ir.ui.view">
             <field name="name">Academy courses: search</field>
-            <field name="model">academy.courses</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
             <field name="arch" type="xml">
                 <search>
-                    <field name="name"/>
                     <field name="teacher_id"/>
                 </search>
             </field>
         </record>
         <record id="academy_course_list" model="ir.ui.view">
             <field name="name">Academy courses: list</field>
-            <field name="model">academy.courses</field>
+            <field name="model">product.template</field>
             <field name="arch" type="xml">
                 <tree string="Courses">
                     <field name="name"/>
@@ -47,20 +48,18 @@
                 </tree>
             </field>
         </record>
+
         <record id="academy_course_form" model="ir.ui.view">
             <field name="name">Academy courses: form</field>
-            <field name="model">academy.courses</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
             <field name="arch" type="xml">
-                <form>
-                    <sheet>
+                <field name="name" position="replace">
+                    <group name="teacher_group">
                         <field name="name"/>
-                        <field name="teacher_id"/>
-                    </sheet>
-                    <div class="oe_chatter">
-                        <field name="message_follower_ids" widget="mail_followers"/>
-                        <field name="message_ids" widget="mail_thread"/>
-                    </div>
-                </form>
+                        <field string="Teacher" name="teacher_id"/>
+                    </group>
+                </field>
             </field>
         </record>
 
